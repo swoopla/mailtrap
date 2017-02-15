@@ -1,0 +1,11 @@
+version: '2'
+services:
+  mailtrap:
+    image: node:alpine
+    restart: always
+    read_only: true
+    ports:
+      - "25:25"
+    volumes:
+      - $PWD/run/data/usr_src_app/mailtrap.js:/usr/src/app/mailtrap.js
+    command: node mailtrap.js

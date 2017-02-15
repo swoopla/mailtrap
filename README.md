@@ -6,8 +6,7 @@ traffic in a valid way, and piping incoming emails to stdout.
 # To run:
 
 ```bash
-docker pull michielbdejong/mailtrap
-docker run -p 25:25 --name mailtrap michielbdejong/mailtrap
+docker-compose up -d
 docker logs -f mailtrap
 ```
 
